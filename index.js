@@ -58,6 +58,17 @@ app.get("/api/hello", async (req, res) => {
   res.status(200).json({ message: "funciona" });
 });
 
+app.get("/api/jackson", async (req, res) => {
+
+  const objetc = {
+    name: "papitas de limon",
+    price: 2000,
+    amount: 1
+  }
+
+  res.status(200).json(objetc);
+});
+
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () =>
