@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import multer from "multer";
-import {Events} from "./models/event.js"
+import { Events } from "./models/event.js";
 import cloudinary from "./config/cloudinary.js";
 import { dbConnection } from "./config/db.js";
 
@@ -53,6 +53,15 @@ app.post("/api/posts", upload.single("image"), async (req, res) => {
     return res.status(500).json({ error: "Error subiendo la imagen" });
   }
 });
+
+app.get("/api/hello"),
+  async (req, res) => {
+    try {
+      res.status(200).json({ message: "funciona" });
+    } catch {
+      return res.status(500).json({ error: "Error hello" });
+    }
+  };
 
 const PORT = process.env.PORT || 3000;
 
