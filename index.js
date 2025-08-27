@@ -54,11 +54,9 @@ app.post("/api/posts", upload.single("image"), async (req, res) => {
   }
 });
 
-
-
-app.get("/api/hello",async (req, res) => {
-    res.status(200).json({ message: "funciona" });
-  });
+app.get("/api/hello", async (req, res) => {
+  res.status(200).json({ message: "funciona" });
+});
 
 const PORT = process.env.PORT || 3000;
 
