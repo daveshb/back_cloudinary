@@ -56,11 +56,7 @@ app.post("/api/posts", upload.single("image"), async (req, res) => {
 
 app.get("/api/hello"),
   async (req, res) => {
-    try {
-      res.status(200).json({ message: "funciona" });
-    } catch {
-      return res.status(500).json({ error: "Error hello" });
-    }
+    res.status(200).json({ message: "funciona" });
   };
 
 const PORT = process.env.PORT || 3000;
