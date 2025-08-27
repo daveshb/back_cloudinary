@@ -58,7 +58,7 @@ app.get("/api/hello", async (req, res) => {
   res.status(200).json({ message: "funciona" });
 });
 
-app.get("/api/jackson", async (req, res) => {
+app.get("/api/jackson2", async (req, res) => {
 
   const objetc = {
     name: "papitas de limon",
