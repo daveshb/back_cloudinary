@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
 import multer from "multer";
-import { Events } from "./models/event.js";
-import cloudinary from "./config/cloudinary.js";
-import { dbConnection } from "./config/db.js";
+import { Events } from "../models/event.js";
+import cloudinary from "../config/cloudinary.js";
+import { dbConnection } from "../config/db.js";
 
 const app = express();
 const upload = multer({ storage: multer.memoryStorage() });
